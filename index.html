@@ -3,240 +3,338 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Precious Thom Portfolio</title>
+<meta name="description" content="Portfolio of Precious Thom, computing and information systems professional with backend development and technical support experience.">
+<title>Precious Thom | Computing & Informatics Portfolio</title>
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<!-- Font Awesome -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
+:root {
+    --blue: #0d6efd;
+    --blue-dark: #084298;
+    --blue-light: #4dabf7;
+    --ink: #172033;
+    --muted: #596579;
+    --background: #f5f7fb;
+    --white: #fff;
+    --border: #e4eaf3;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 85px; }
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #f5f7fb;
-    color: #333;
+    background: var(--background);
+    color: var(--ink);
+    line-height: 1.7;
 }
-
+a { color: var(--blue); }
 header {
-    background: linear-gradient(135deg, #0d6efd, #4dabf7);
+    background: linear-gradient(135deg, #084298, #0d6efd 55%, #4dabf7);
     color: white;
     text-align: center;
-    padding: 60px 20px;
+    padding: 58px 20px 64px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 18px;
+    gap: 12px;
 }
-
 header img {
-    width: 220px;
-    height: 220px;
-    aspect-ratio: 1 / 1;
+    width: 175px;
+    height: 175px;
     object-fit: cover;
-    object-position: center center;
-    display: block;
-    max-width: 100%;
+    object-position: center;
     border-radius: 50%;
-    border: 5px solid rgba(255, 255, 255, 0.95);
-    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.18);
+    border: 5px solid rgba(255,255,255,.95);
+    box-shadow: 0 15px 35px rgba(15,23,42,.2);
     background: white;
-    padding: 6px;
-    margin-bottom: 0;
 }
-
-header p {
-    max-width: 600px;
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.92);
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .78rem;
+    font-weight: 600;
+    color: #dcecff;
+    margin: 8px 0 0;
 }
-
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    background: white;
-    padding: 15px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    position: sticky;
-    top: 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-}
-
-section {
-    padding: 50px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-h2 {
-    margin-bottom: 20px;
-}
-
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.skill {
-    background: #e7f1ff;
-    padding: 10px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-}
-
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.project {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s;
-}
-
-.project:hover {
-    transform: translateY(-5px);
-}
-
-button {
-    margin-top: 10px;
-    padding: 10px 15px;
-    background: #0d6efd;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #0d6efd;
-    color: white;
-    margin-top: 40px;
-}
-
-.whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    padding: 15px;
-    border-radius: 60%;
-    width: 20px;
-    height: 20px;
-    font-size: 20px;
-    text-decoration: none;
-    transition: transform 0.3s ease;
-    display: flex;
+header h1 { margin: 0; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.2; }
+header .tagline { max-width: 760px; margin: 0; color: rgba(255,255,255,.94); }
+.header-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 10px; }
+.btn {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 8px;
+    padding: 11px 17px;
+    border-radius: 9px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform .2s ease, background .2s ease;
 }
-
-.whatsapp:hover {
-    animation: pulse 1s infinite;
+.btn:hover { transform: translateY(-2px); }
+.btn-light { background: white; color: var(--blue-dark); }
+.btn-outline { border-color: rgba(255,255,255,.8); color: white; background: transparent; }
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 24px;
+    background: rgba(255,255,255,.97);
+    padding: 14px 18px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.07);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+nav a { text-decoration: none; color: #333d50; font-weight: 500; font-size: .93rem; }
+nav a:hover { color: var(--blue); }
+section { padding: 44px 20px; max-width: 1060px; margin: auto; }
+.section-heading { margin-bottom: 20px; }
+.section-heading h2 { margin: 0 0 5px; font-size: 1.7rem; }
+.section-heading p { margin: 0; color: var(--muted); }
+.card, .project, .timeline-item {
+    background: var(--white);
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(22,40,70,.045);
+}
+.card p:first-child { margin-top: 0; }
+.card p:last-child { margin-bottom: 0; }
+.quick-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-top: 18px; }
+.fact { background: #edf4ff; border-radius: 12px; padding: 16px; }
+.fact strong { display: block; color: var(--blue-dark); margin-bottom: 3px; }
+.skills { display: flex; flex-wrap: wrap; gap: 10px; }
+.skill {
+    background: #e7f1ff;
+    color: #174680;
+    border: 1px solid #d4e6ff;
+    padding: 8px 13px;
+    border-radius: 999px;
+    font-size: .9rem;
+}
+.note { color: var(--muted); font-size: .9rem; margin-top: 14px; }
+.timeline { display: grid; gap: 16px; }
+.timeline-item h3 { margin: 0; font-size: 1.13rem; }
+.meta { color: var(--muted); font-size: .92rem; margin: 3px 0 12px; }
+.timeline-item ul { padding-left: 21px; margin-bottom: 0; }
+.timeline-item li { margin: 6px 0; }
+.projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 18px; }
+.project { display: flex; flex-direction: column; align-items: flex-start; transition: transform .2s ease, box-shadow .2s ease; }
+.project:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(22,40,70,.09); }
+.project .project-icon { color: var(--blue); font-size: 1.45rem; margin-bottom: 9px; }
+.project h3 { margin: 0 0 8px; font-size: 1.12rem; }
+.project p { color: var(--muted); margin: 0 0 18px; flex: 1; }
+.project .btn { font-size: .9rem; padding: 9px 13px; background: var(--blue); color: white; }
+.education-list { display: grid; gap: 14px; }
+.education-item { border-left: 4px solid var(--blue); padding: 5px 0 5px 17px; }
+.education-item h3 { margin: 0; font-size: 1.05rem; }
+.education-item p { margin: 4px 0 0; color: var(--muted); }
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+.contact-link {
+    display: flex; align-items: center; gap: 13px; padding: 16px;
+    border: 1px solid var(--border); border-radius: 12px; background: white;
+    color: var(--ink); text-decoration: none; overflow-wrap: anywhere;
+}
+.contact-link i { color: var(--blue); font-size: 1.2rem; width: 24px; text-align: center; }
+.contact-link small { display: block; color: var(--muted); }
+footer { text-align: center; padding: 24px 18px; background: #084298; color: white; margin-top: 35px; }
+footer p { margin: 4px 0; }
+.whatsapp {
+    position: fixed; bottom: 20px; right: 20px; z-index: 20;
+    background: #25D366; color: white; width: 54px; height: 54px;
+    border-radius: 50%; font-size: 26px; text-decoration: none;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 5px 18px rgba(0,0,0,.2);
+}
+.whatsapp:hover { transform: scale(1.07); }
+@media (max-width: 600px) {
+    header { padding: 42px 18px 48px; }
+    header img { width: 145px; height: 145px; }
+    nav { gap: 8px 15px; }
+    section { padding: 32px 16px; }
+    .card, .project, .timeline-item { padding: 20px; }
 }
 </style>
 </head>
 
 <body>
-
 <header>
-    <img src="./images/profile-p.jpg" alt="Profile Photo">
+    <img src="./images/profile-p.jpg" alt="Profile photo of Precious Thom">
+    <p class="eyebrow">Computing · Backend Development · Technical Support</p>
     <h1>Precious Thom</h1>
-    <p>Aspiring Software Developer</p>
-    <button onclick="window.location.href='https://github.com/preciousthomchinyama'">View My Work</button>
+    <p class="tagline">Computing and information systems professional with experience in backend software engineering training, payment-system integrations, and technical sales support.</p>
+    <div class="header-actions">
+        <a class="btn btn-light" href="https://github.com/preciousthomchinyama" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View My Work</a>
+        <a class="btn btn-outline" href="mailto:preciousthom43@gmail.com"><i class="fas fa-envelope"></i> Contact Me</a>
+    </div>
 </header>
 
-<nav>
+<nav aria-label="Main navigation">
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
 </nav>
 
+<main>
 <section id="about">
-    <div class="card">
+    <div class="section-heading">
         <h2>About Me</h2>
-        <p>I am a Computing and Information Systems student at MUBAS based in Blantyre, Malawi. I am passionate about web development and building real-world systems that solve problems.</p>
+        <p>Building practical skills through work and software projects.</p>
+    </div>
+    <div class="card">
+        <p>I am a computing and information systems professional based in Blantyre, Malawi. My experience includes working as a PaySimati Trainee AWS Software Engineer and, more recently, as a Technical Sales Support Officer at Afrimax. My technical exposure includes Python-based backend components, API integrations, database operations, and software deployment workflows.</p>
+        <p>I am also developing a business management backend using PHP and CodeIgniter 4. I am interested in creating dependable digital tools, understanding existing systems, and applying technology to practical problems, including opportunities in informatics and global health.</p>
+        <div class="quick-facts">
+            <div class="fact"><strong>Current role</strong>Technical Sales Support Officer</div>
+            <div class="fact"><strong>Location</strong>Blantyre, Malawi</div>
+            <div class="fact"><strong>Education</strong>ABMA Level 5; Level 6 passed with Merit</div>
+        </div>
     </div>
 </section>
 
 <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-        <div class="skill">PHP</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">Java</div>
-        <div class="skill">HTML & CSS</div>
-        <div class="skill">MySQL</div>
+    <div class="section-heading">
+        <h2>Technical Skills</h2>
+        <p>Tools and technologies I have used or studied.</p>
+    </div>
+    <div class="card">
+        <div class="skills">
+            <span class="skill">Python — practical exposure</span>
+            <span class="skill">PHP</span>
+            <span class="skill">CodeIgniter 4</span>
+            <span class="skill">SQL</span>
+            <span class="skill">PostgreSQL</span>
+            <span class="skill">MySQL — foundational knowledge</span>
+            <span class="skill">AWS Lambda</span>
+            <span class="skill">API Integration</span>
+            <span class="skill">Git & GitHub</span>
+            <span class="skill">Azure Pipelines — exposure</span>
+            <span class="skill">HTML & CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Java</span>
+            <span class="skill">Debugging & Troubleshooting</span>
+            <span class="skill">Database Migrations</span>
+        </div>
+        <p class="note">Skill labels are intentionally descriptive. Add NoSQL, agile, or other technologies only when you can confidently discuss your practical knowledge of them.</p>
+    </div>
+</section>
+
+<section id="experience">
+    <div class="section-heading">
+        <h2>Professional Experience</h2>
+        <p>Experience at Afrimax.</p>
+    </div>
+    <div class="timeline">
+        <article class="timeline-item">
+            <h3>Technical Sales Support Officer</h3>
+            <p class="meta">Afrimax · 1 September 2026 – Present</p>
+            <ul>
+                <li>Provide technical sales support in line with assigned responsibilities.</li>
+                <li>Assist customers and stakeholders with technical product or service enquiries.</li>
+                <li>Communicate technical information and help address technical issues within the scope of the role.</li>
+            </ul>
+            <p class="note">Please refine these bullets to match your actual day-to-day duties.</p>
+        </article>
+        <article class="timeline-item">
+            <h3>PaySimati Trainee AWS Software Engineer</h3>
+            <p class="meta">Afrimax · 1 June 2026 – 31 August 2026</p>
+            <ul>
+                <li>Gained exposure to backend software development and payment-system integrations.</li>
+                <li>Worked with Python-based AWS Lambda components and existing application code.</li>
+                <li>Contributed to or supported work relating to Mobile Money Levy and Bank Transfer Levy functionality, as applicable to assigned tasks.</li>
+                <li>Gained exposure to PostgreSQL transaction records and deployment workflows using Azure Pipelines and AWS infrastructure.</li>
+            </ul>
+            <p class="note">Keep only the points that accurately describe work you personally performed.</p>
+        </article>
+    </div>
+</section>
+
+<section id="education">
+    <div class="section-heading">
+        <h2>Education & Qualifications</h2>
+        <p>MUBAS ICE · Computing and Information Systems</p>
+    </div>
+    <div class="card education-list">
+        <div class="education-item">
+            <h3>ABMA Level 6 Diploma in Computing and Information Systems</h3>
+            <p>Passed with Merit; awaiting award of the diploma.</p>
+        </div>
+        <div class="education-item">
+            <h3>ABMA Level 5 Diploma in Computing and Information Systems</h3>
+            <p>Qualification completed. Add award or completion date if desired.</p>
+        </div>
     </div>
 </section>
 
 <section id="projects">
-    <h2>Projects</h2>
+    <div class="section-heading">
+        <h2>Projects</h2>
+        <p>Selected software projects and repositories.</p>
+    </div>
     <div class="projects">
-        <div class="project">
+        <article class="project">
+            <div class="project-icon"><i class="fas fa-boxes-stacked"></i></div>
+            <h3>Insale Business Management Backend</h3>
+            <p>A CodeIgniter 4 backend project designed to support business workflows such as inventory, sales, purchasing, expenses, and reporting.</p>
+            <a class="btn" href="https://github.com/preciousthomchinyama/insale" target="_blank" rel="noopener noreferrer">View Repository <i class="fas fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="project">
+            <div class="project-icon"><i class="fas fa-car"></i></div>
             <h3>Taxi Booking System</h3>
-            <p>Web-based taxi booking platform.</p>
-            <button onclick="window.open('https://github.com/preciousthomchinyama/Keith-s_tax_services.git')">View Project</button>
-        </div>
-
-        <div class="project">
+            <p>A web-based taxi booking platform.</p>
+            <a class="btn" href="https://github.com/preciousthomchinyama/Keith-s_tax_services" target="_blank" rel="noopener noreferrer">View Repository <i class="fas fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="project">
+            <div class="project-icon"><i class="fas fa-building-columns"></i></div>
             <h3>Bank System</h3>
-            <p>Web-based banking system.</p>
-            <button onclick="window.open('https://github.com/preciousthomchinyama/MyBankingSystem.git')">View Project</button>
-        </div>
-
-        <div class="project">
+            <p>A web-based banking system project.</p>
+            <a class="btn" href="https://github.com/preciousthomchinyama/MyBankingSystem" target="_blank" rel="noopener noreferrer">View Repository <i class="fas fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="project">
+            <div class="project-icon"><i class="fas fa-laptop-file"></i></div>
             <h3>Asset Management System</h3>
-            <p>Web-based asset management system.</p>
-            <button onclick="window.open('https://github.com/preciousthomchinyama/asset_management_system.git')">View Project</button>
-        </div>
+            <p>A web-based asset management system project.</p>
+            <a class="btn" href="https://github.com/preciousthomchinyama/asset_management_system" target="_blank" rel="noopener noreferrer">View Repository <i class="fas fa-arrow-up-right-from-square"></i></a>
+        </article>
     </div>
 </section>
 
 <section id="contact">
-    <div class="card">
+    <div class="section-heading">
         <h2>Contact</h2>
-        <p>Email: preciousthom43@gmail.com</p>
-        <p>GitHub: <a href="https://github.com/preciousthomchinyama" target="_blank" style="color:#0d6efd;">preciousthomchinyama</a></p>
+        <p>Get in touch about software development or technical opportunities.</p>
+    </div>
+    <div class="contact-grid">
+        <a class="contact-link" href="mailto:preciousthom43@gmail.com">
+            <i class="fas fa-envelope"></i>
+            <span><small>Email</small>preciousthom43@gmail.com</span>
+        </a>
+        <a class="contact-link" href="tel:+265880025992">
+            <i class="fas fa-phone"></i>
+            <span><small>Phone</small>+265 880025992</span>
+        </a>
+        <a class="contact-link" href="https://github.com/preciousthomchinyama" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+            <span><small>GitHub</small>preciousthomchinyama</span>
+        </a>
     </div>
 </section>
+</main>
 
 <footer>
     <p>© 2026 Precious Thom</p>
+    <p>Computing · Backend Development · Technical Support</p>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/0880025992" target="_blank" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-
+<a class="whatsapp" href="https://wa.me/265880025992" target="_blank" rel="noopener noreferrer" aria-label="Chat with Precious on WhatsApp" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
 </body>
 </html>
